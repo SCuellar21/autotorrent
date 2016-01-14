@@ -7,6 +7,7 @@ Everything else is my messy code. Please don't look at it, it's pretty bad, but 
 The only dependency is LXML for Python 3.5, you can install by pip on Unix or grab the wheel for Windows here: http://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml
 
 == USAGE ==
+
 Run main.py from the terminal or whatever
 Main menu will show up (if it didn't then it's broke)
 Enter '1' or '2' for a manual search or to import and torrent a playlist, respectively. 
