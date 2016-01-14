@@ -11,6 +11,10 @@ The default version is for Windows, but the 'unix' folder contains a new main.py
 
 The only dependency is LXML for Python 3.5, you can install by pip on Unix or grab the wheel for Windows here: http://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml
 
+
+
+
+
 == USAGE ==
 
 Run main.py from the terminal or whatever
@@ -34,6 +38,9 @@ If the program searches and doesn't find anything, you can try searching by arti
 Or input 'm' for manual mode or 's' to skip or 'q' to quit.
 
 That's about it, have fun
+
+
+
 
 == KNOWN BUGS == 
 
