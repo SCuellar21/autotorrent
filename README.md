@@ -38,10 +38,3 @@ If the program searches and doesn't find anything, you can try searching by arti
 Or input 'm' for manual mode or 's' to skip or 'q' to quit.
 
 That's about it, have fun
-
-
-
-
-== KNOWN BUGS == 
-
-Sometimes on Windows, a search will return a result with a character that causes an error in encoding. I don't quite know how to fix this, it's only happened once to me so I don't forsee it being a huge problem.
