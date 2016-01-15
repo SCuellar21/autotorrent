@@ -16,7 +16,7 @@ chrome_path = 'open -a /Applications/Google\ Chrome.app %s'
 def ripandprint(s):
     for i in s:
         if i.category == "Audio":
-            sr.append([i.title,float(numbers.findall(i.size)[0]),i.seeders,i.leechers,i.magnet_link,i.torrent_link])
+            sr.append([i.title.replace("–", "-"),float(numbers.findall(i.size)[0]),i.seeders,i.leechers,i.magnet_link,i.torrent_link])
             ct = 1
             sr.sort(key=lambda sr: sr[2])
             sr.reverse()
@@ -88,7 +88,7 @@ if menu == '1':
         #Rip torrent data
         for i in s:
             if i.category == "Audio":
-                sr.append([i.title,float(numbers.findall(i.size)[0]),i.seeders,i.leechers,i.magnet_link,i.torrent_link])
+                sr.append([i.title.replace("–", "-"),float(numbers.findall(i.size)[0]),i.seeders,i.leechers,i.magnet_link,i.torrent_link])
                 ct = 1
                 sr.sort(key=lambda sr: sr[2])
                 sr.reverse()
