@@ -56,8 +56,8 @@ class List(object):
         Request URL and parse response. Yield a ``Torrent`` for every torrent
         on page.
         """
-        os.system("curl %s -o /Users/anthony/google.html -s" % str(self.url))
-        request = urlopen("file:///Users/anthony/google.html")
+        os.system("curl %s -o /tmp.html -s" % str(self.url))
+        request = urlopen("file:///tmp.html")
         document = html.parse(request)
         root = document.getroot()
         items = [self._build_torrent(row) for row in
@@ -320,8 +320,8 @@ class Torrent(object):
     @property
     def info(self):
         if self._info is None:
-            os.system("curl %s -o /Users/anthony/google.html -s" % str(self.url))
-            request = urlopen("file:///Users/anthony/google.html")
+            os.system("curl %s -o /tmp.html -s" % str(self.url))
+            request = urlopen("file:///tmp.html")
             document = html.parse(request)
             root = document.getroot()
             if root.cssselect('#details > .nfo > pre') != []:
@@ -336,8 +336,8 @@ class Torrent(object):
         if not self._files:
             path = '/ajax_details_filelist.php?id={id}'.format(id=self.id)
             url = self.url.path(path)
-            os.system("curl %s -o /Users/anthony/google.html -s" % str(self.url))
-            request = urlopen("file:///Users/anthony/google.html")
+            os.system("curl %s -o /tmp.html -s" % str(self.url))
+            request = urlopen("file:///tmp.html")
             document = html.parse(request)
             root = document.getroot()
             rows = root.findall('.//tr')
